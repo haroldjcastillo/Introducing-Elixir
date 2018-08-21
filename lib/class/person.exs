@@ -52,6 +52,63 @@ defmodule Person do
   Czech Republic	18
   """
   def can_drink?(p) do
+    age = get_age(p.country)
+    IO.puts(age)
     p.age >= 18
   end
+
+  def get_age(country) do
+    countrys = [
+      { Afghanistan, -1 },
+      { "Albania", 18 },
+      { "Algeria", 18 },
+      { "Andorra", 18 },
+      { "Angola", 18 },
+      { "Antigua and Barbuda", 10 },
+      { "Argentina", 18 },
+      { "Armenia", 18 },
+      { "Australia", 18 },
+      { "Austria", 16 },
+      { "Azerbaijan", 18 },
+      { "Bahamas", 18 },
+      { "Bahrain", -1 },
+      { "Bangladesh", -1 },
+      { "Barbados", 18 },
+      { "Belarus", 18 },
+      { "Belgium", 16 },
+      { "Belize", 18 },
+      { "Benin", 0 },
+      { "Bhutan", 18 },
+      { "Bolivia", 0 },
+      { "Bosnia and Herzegovina", 18 },
+      { "Botswana", 18 },
+      { "Brazil", 18 },
+      { "Brunei Darussalam", -1 },
+      { "Bulgaria", 18 },
+      { "Burkina Faso", 0 },
+      { "Burundi", 18 },
+      { "Cambodia", 0 },
+      { "Cameroon", 0 },
+      { "Canada", 19 },
+      { "Cape Verde", 18 },
+      { "Central African Republic", 15 },
+      { "Chad", 18 },
+      { "Chile", 18 },
+      { "China", 0 },
+      { "Colombia", 18 },
+      { "Comoros", 18 },
+      { "Congo", 16 },
+      { "Costa Rica", 18 },
+      { "Cote d'Ivoire", 21 },
+      { "Croatia", 18 },
+      { "Cuba", 18 },
+      { "Cyprus", 17 },
+      { "Czech Republic", 18 }
+     ]
+    Keyword.fetch!(countrys, country)
+  end
+
+
 end
+# c("person.exs")
+# harold = %Person{name: "Harold", age: 28, gender: "M", country: "Colombia"}

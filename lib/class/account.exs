@@ -1,6 +1,9 @@
 defmodule Account do
+
   def balance(initial, spending) do
-    format(initial - spending, '$')
+    discount(initial, spending)
+      |> interest(0.1)
+      |> format('$')
   end
 
   def discount(total, amount) do
