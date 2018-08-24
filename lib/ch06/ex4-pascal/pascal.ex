@@ -22,6 +22,6 @@ end
 
 """
 c("pascal.ex")
-ascal.triangle(4)
+Pascal.triangle(4)
 Pascal.triangle(6)
 """
